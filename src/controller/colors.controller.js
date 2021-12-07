@@ -1,17 +1,30 @@
 const express = require('express');
 
-const { updateColorSchema, createColorSchema, getColorSchema } = require('./../schemas/colors.schema');
+
+const ColorsService = require('../services/colors.service');
+const colorsService = new ColorsService();
 
 const colorController = express.Router();
 
-colorController.get('/', async (req, res) => {
+
+colorController.get('/', async (req, res, next) => {
   try {
-    res.json({
-      name:'Dany'
-    })
+    const colors = await colorsService.find()
+    res.json(colors)
   } catch (error) {
-    console.log(error);
+    next(error);
+  }
+})
+
+colorController.get('/:id', async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const color = await colorsService.findOne(id)
+    res.json(color)
+  } catch (error) {
+    next(error);
   }
 })
 
 module.exports = colorController;
+
