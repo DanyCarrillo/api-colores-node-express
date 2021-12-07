@@ -1,10 +1,12 @@
+const NUMBERS = require('../helpers/numbers');
+
 const Joi = require('joi');
 
 const id = Joi.number().integer();
 const name = Joi.string();
-const color = Joi.string().min(7);
-const year = Joi.number().integer().min(4);
-const pantoneValue = Joi.string().min(6);
+const color = Joi.string().min(NUMBERS.SEVEN);
+const year = Joi.number().integer().min(NUMBERS.FOUR);
+const pantoneValue = Joi.string().min(NUMBERS.SIX);
 
 const createColorSchema = Joi.object({
   name: name.required(),
