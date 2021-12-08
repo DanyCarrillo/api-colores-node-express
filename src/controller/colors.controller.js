@@ -10,9 +10,7 @@ const colorController = express.Router();
 
 colorController.get('/', async (req, res, next) => {
   try {
-
     const {page, size} = req.query;
-
     const colors = await colorsService.findAll(page, size);
     res.json(colors)
   } catch (error) {
