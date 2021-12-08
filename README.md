@@ -11,7 +11,7 @@ Guía que permitirá conocer todo lo necesario para ejecutar y consumir la API d
 
 ## Instalación de dependencias
 
-1. Clonar el proyecto.
+1. Clonar el proyecto https://github.com/DanyCarrillo/api-colores-node-express.git
 2. Ejecutar `npm install` para instalar todas las dependencias.
 
 ## Configuraciones
