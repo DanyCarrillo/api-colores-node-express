@@ -46,7 +46,7 @@ class ColorsRepository {
   async delete(identifier){
     const color = await this.findOne(identifier);
     await color.update({statusId: NUMBERS.TWO});
-    return identifier;
+    return Number(identifier);
   }
 
 

@@ -94,7 +94,7 @@ class ColorsService{
       throw boom.notFound('color not found')
     }
     const deleted = await colorsRepository.delete(identifier);
-    return deleted;
+    return Number(deleted);
   }
 }
 
