@@ -12,7 +12,7 @@ Guía que permitirá conocer todo lo necesario para ejecutar y consumir la API d
 ## Instalación de dependencias
 
 1. Clonar el proyecto https://github.com/DanyCarrillo/api-colores-node-express.git
-2. Ejecutar `npm install` para instalar todas las dependencias.
+2. Ejecutar `npm install` para instalar todas las dependencias. Jest se debe instalar global `npm install jest --global`
 
 ## Configuraciones
 
@@ -26,6 +26,10 @@ Si ya tenemos todos los pasos ejecutados, estamos listos para correr el proyecto
 
 - `npm run start` para ejecutar el proyecto.
 - Consumir los servicios que se encuentran en la colección de insomnia.
+
+## Ejecutar pruebas unitarias
+
+- `npm run test` para ejecutar las pruebas unitarias con jest.
 
 # Servicios
 
